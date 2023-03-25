@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:site_url",
+ "creation": "2023-03-25 06:05:16.673639",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "site_url",
+  "column_break_5lmpz",
+  "license_key",
+  "section_break_8rpbd",
+  "allowed_users",
+  "allowed_companies",
+  "column_break_eyxzt",
+  "allowed_storage_spacemb",
+  "allowed_database_spacemb",
+  "section_break_nipxv",
+  "site_expiry_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "site_url",
+   "fieldtype": "Data",
+   "label": "Site URL",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_5lmpz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8rpbd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "allowed_users",
+   "fieldtype": "Int",
+   "label": "Allowed Users"
+  },
+  {
+   "fieldname": "allowed_companies",
+   "fieldtype": "Int",
+   "label": "Allowed Companies"
+  },
+  {
+   "fieldname": "column_break_eyxzt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "allowed_storage_spacemb",
+   "fieldtype": "Int",
+   "label": "Allowed Storage Space(MB)"
+  },
+  {
+   "fieldname": "allowed_database_spacemb",
+   "fieldtype": "Int",
+   "label": "Allowed Database Space(MB)"
+  },
+  {
+   "fieldname": "section_break_nipxv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "site_expiry_date",
+   "fieldtype": "Date",
+   "label": "Site Expiry Date"
+  },
+  {
+   "fieldname": "license_key",
+   "fieldtype": "Data",
+   "label": "License KEY",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-25 06:11:50.978827",
+ "modified_by": "Administrator",
+ "module": "Quota Module Controller",
+ "name": "Quota Module Controller",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
