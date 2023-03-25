@@ -17,7 +17,7 @@ def verify_license(license_key=None):
     
     if url != domain:
         frappe.local.response.http_status_code = 403
-        return _("This License key doesn't exists or the your site url not registered for it")
+        return _(f"{domain} {url} This License key doesn't exists or the your site url not registered for it")
     else:
         doc = frappe.get_doc("Quota Module Controller", sites[0].name)
         return {
