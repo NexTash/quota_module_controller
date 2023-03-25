@@ -4,20 +4,19 @@ from frappe.utils import get_site_name
 from urllib.parse import urlparse
 
 @frappe.whitelist(allow_guest=True)
-def verify_license(license_key=None):
-    if not license_key:
+def verify_license(license_key=None, domain= None):
+    if not license_key or not domain:
         return
 
     sites = frappe.get_all("Quota Module Controller", {"license_key": license_key}, ["site_url", "name"])
     url = sites[0].site_url if len(sites) else "https://example.com"
-    domain = request.host
 
     url = get_site_name(urlparse(url).hostname)
     domain = get_site_name(domain)
     
     if url != domain:
         frappe.local.response.http_status_code = 403
-        return _(f"{request.host} {domain} {url} {license_key} {sites[0].name} This License key doesn't exists or the your site url not registered for it")
+        return _(f"This License key doesn't exists or the your site url not registered for it")
     else:
         doc = frappe.get_doc("Quota Module Controller", sites[0].name)
         return {
