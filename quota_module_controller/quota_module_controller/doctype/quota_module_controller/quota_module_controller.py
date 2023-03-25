@@ -32,5 +32,5 @@ class QuotaModuleController(Document):
             frappe.msgprint("Triggerd!")
         else:
             # Print an error message if the request failed
-            frappe.throw(f"Error {response.status_code}: {response.json()}")
+            frappe.throw(f"Error {response.status_code}:")
         return 0
