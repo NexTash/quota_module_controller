@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include quota_module_controller *.css
+recursive-include quota_module_controller *.csv
+recursive-include quota_module_controller *.html
+recursive-include quota_module_controller *.ico
+recursive-include quota_module_controller *.js
+recursive-include quota_module_controller *.json
+recursive-include quota_module_controller *.md
+recursive-include quota_module_controller *.png
+recursive-include quota_module_controller *.py
+recursive-include quota_module_controller *.svg
+recursive-include quota_module_controller *.txt
+recursive-exclude quota_module_controller *.pyc
