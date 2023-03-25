@@ -10,7 +10,7 @@ def verify_license(license_key=None):
 
     sites = frappe.get_all("Quota Module Controller", {"license_key": license_key}, ["site_url", "name"])
     url = sites[0].site_url if len(sites) else "https://example.com"
-    domain = request.headers.get("X-Frappe-Site-Name") or request.host
+    domain = request.host
 
     url = get_site_name(urlparse(url).hostname)
     domain = get_site_name(domain)
