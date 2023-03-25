@@ -4,7 +4,10 @@ from frappe.utils import get_site_name
 
 
 @frappe.whitelist(allow_guest=True)
-def verify_license(license_key):
+def verify_license(license_key=None):
+    if not license_key:
+        return
+        
     sites = frappe.get_all("Quota Module Controller", {
                            "license_key": license_key}, ["site_url", "name"])
     url = sites[0].site_url if len(sites[0]) else "https://example.com"
