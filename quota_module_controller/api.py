@@ -12,7 +12,6 @@ def verify_license(license_key=None, domain= None):
     url = sites[0].site_url if len(sites) else "https://example.com"
 
     url = get_site_name(urlparse(url).hostname)
-    domain = get_site_name(domain)
     
     if url != domain:
         frappe.local.response.http_status_code = 403
